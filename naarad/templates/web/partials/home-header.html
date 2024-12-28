@@ -1,0 +1,61 @@
+{% load static %}
+
+<section class="hero-sec">
+    <div class="container">
+        <div class="hero-sec-top scroll-animation" data-animation="slide_up">
+            <div class="hero-left">
+                <a href="index.html" class="logo"><img src="{% static 'web/imgs/naarad-logo.png' %}" alt="Symble"></a>
+                <div class="location-and-time">
+                    Toronto, Canada / <span class="realtime"></span>
+                </div>
+            </div>
+            <div class="hero-right">
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="work.html" class="splite-text-anim">
+                            <span>( Works )</span>
+                            <span>( Works )</span>
+                        </a></li>
+                        <li><a href="contact.html" class="splite-text-anim">
+                            <span>( Start a Project )</span>
+                            <span>( Start a Project )</span>
+                        </a></li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="show-navigation-popover theme-btn">NAVIGATION MENU</a>
+
+            </div>
+        </div>
+
+        <!-- Hero Bottom -->
+        <div class="hero-sec-bottom">
+            <div class="hero-sec-bottom-left">
+                <span class="subtitle">
+                    <img src="{% static 'web/imgs/clock.svg' %}" alt="Clock">
+                    project will kickoff within 24 hours
+                </span>
+                <h1 class="hero-title with-circle-shape">
+                    <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down">Visual<img class="white-circle-shape" src="{% static 'web/imgs/white-circle-shape.svg' %}" alt="shape"></span></span>
+                    <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down"  data-animation-delay="0.2">Designer</span></span>
+
+                    <span class="circle-primary-shape scroll-animation" data-animation="boldz_zoom_in" data-animation-delay="0.5"></span>
+                </h1>
+            </div>
+            <div class="hero-sec-bottom-right">
+                <div class="hero-sec-bottom-right-content-top">
+                    <video width="225" height="127" src="{% static 'web/video/framer-video.mp4' %}" loop muted autoplay playsinline=""></video>
+
+                    
+                    <p>xotto® is a leading strategic brand
+                        consultancy that positions and redefines the
+                        world's most exciting tech companies.</p>
+                </div>
+                <a href="work.html" class="link-with-border splite-text-anim">
+                    <span>SEE ALL PROJECTS (17+)</span>
+                    <span>SEE ALL PROJECTS (17+)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

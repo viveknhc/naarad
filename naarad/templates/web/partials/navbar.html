@@ -1,0 +1,79 @@
+{% load static %}
+
+<div class="popup-menu-wrap">
+    <div class="popup-menu-header">
+        <div class="left">
+            <a href="index.html" class="logo"><img src="{% static 'web/imgs/naarad-logo.png' %}" alt="Symble"></a>
+            <div class="location-and-time">
+                Toronto, Canada / <span class="realtime"></span>
+            </div>
+        </div>
+
+        <a href="#" class="close-navigation-btn theme-btn primary-bg">X CLOSE</a>
+    </div>
+    <div class="popup-menu">
+        <nav>
+            <ul>
+                <li class="active">
+                    <a href="index.html">
+                        <span class="count">[01]</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'web:about' %}">
+                        <span class="count">[02]</span>
+                        <span>About</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="service.html">
+                        <span class="count">[02]</span>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog.html">
+                        <span class="count">[03]</span>
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pricing.html">
+                        <span class="count">[04]</span>
+                        <span>Pricing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <span class="count">[05]</span>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="popup-menu-footer">
+        <div class="copyright">
+            <p>©2024 ALL RIGHTS RESERVED</p>
+
+            <ul class="social-links-text">
+                <li><a href="https://instagram.com/" class="splite-text-anim">
+                    <span>Instagram <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
+                    <span>Instagram <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
+                </a></li>
+                <li><a href="https://twitter.com/" class="splite-text-anim">
+                    <span>Twitter <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
+                    <span>Twitter <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
+                </a></li>
+                <li><a href="https://facebook.com/" class="splite-text-anim">
+                    <span>Facebook <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
+                    <span>Facebook <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
+                </a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>

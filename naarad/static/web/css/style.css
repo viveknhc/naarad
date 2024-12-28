@@ -1135,7 +1135,7 @@ a.link-with-border:hover {
 
 /* # About */
 .about-sec {
-    padding-bottom: 200px;
+    padding: 200px 0 0 0;
 }
 .about-sec .container {
     padding-left: 74px;

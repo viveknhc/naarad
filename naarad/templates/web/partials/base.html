@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== Meta ===== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Favicon ===== -->
+    <link rel="icon" type="image/x-icon" href="{% static 'web/imgs/favicon.png' %}">
+
+    <!-- ===== Title ===== -->
+    <title>Boldz - Personal Portfolio HTML5 Template</title>
+
+    <!-- ===== LineAwesome ===== -->
+    <link rel="stylesheet" href="{% static 'web/css/line-awesome.min.css' %}">
+
+
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;family=Inter:wght@100..900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- ===== Stylesheet ===== -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
+</head>
+
+<body>
+    <!-- ===== Magic Cursor Start ===== -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+    <!-- ===== Magic Cursor End ===== -->
+
+    <!-- ===== Pre Loader Start ===== -->
+    <!-- <div class="preloader-wrap">
+        <div class="preloader-content">
+            <div class="logo"><img src="{% static 'web/imgs/naarad-logo.png' %}" alt="Symble"></div>
+            <div class="preloader-bar-wrap">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- ===== Pre Loader End ===== -->
+
+
+    <!-- ===== Main Start ===== -->
+    <main class="page-main home-page">
+
+        <!-- ===== Popover Menu Start ===== -->
+
+        {% include 'web/partials/navbar.html' %}
+
+
+        <!-- ===== Popover Menu End ===== -->
+
+        <!-- ===== Smooth Scroll Start ===== -->
+
+        {% block content %}
+
+        {% endblock %}
+
+    </main>
+    <!-- ===== Main End ===== -->
+
+
+    <!-- ===== Scripts ===== -->
+    <script src="{% static 'web/js/jquery.js' %}"></script>
+    <script src="{% static 'web/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'web/js/gsap.min.js' %}"></script>
+    <script src="{% static 'web/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'web/js/ScrollToPlugin.min.js' %}"></script>
+
+    <script src="{% static 'web/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'web/js/SplitText.min.js' %}"></script>
+    <script src="{% static 'web/js/jarallax.js' %}"></script>
+    <script src="{% static 'web/js/jarallax-element.min.js' %}"></script>
+    <script src="{% static 'web/js/main.js' %}"></script>
+    <script src="{% static 'web/js/themescroll.js' %}"></script>
+</body>
+
+</html>
