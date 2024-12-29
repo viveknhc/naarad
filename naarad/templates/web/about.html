@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="hero-sec-top scroll-animation" data-animation="slide_up">
                     <div class="hero-left">
-                        <a href="index.html" class="logo"><img src="{% static 'web/imgs/naarad-logo.png' %}"
+                        <a href="{% url 'web:index' %}" class="logo"><img src="{% static 'web/imgs/naarad-logo.png' %}"
                                 alt="Symble"></a>
                         <div class="location-and-time">
                             Toronto, Canada / <span class="realtime"></span>
@@ -19,7 +19,7 @@
                     <div class="hero-right">
                         <nav class="main-menu">
                             <ul>
-                                <li><a href="work.html" class="splite-text-anim">
+                                <li><a href="{% url 'web:services' %}" class="splite-text-anim">
                                         <span>( Services )</span>
                                         <span>( Services )</span>
                                     </a></li>

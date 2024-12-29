@@ -1,0 +1,135 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <!-- ===== Hero Area Start ===== -->
+        <section class="hero-sec work-hero-sec">
+            <div class="container">
+                <div class="hero-sec-top scroll-animation" data-animation="slide_up">
+                    <div class="hero-left">
+                        <a href="index.html" class="logo">JAURDEN HUGHES <img src="assets/imgs/r.svg" alt="Symble"></a>
+                        <div class="location-and-time">
+                            Toronto, Canada / <span class="realtime"></span>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <nav class="main-menu">
+                            <ul>
+                                <li><a href="work.html" class="splite-text-anim">
+                                    <span>( Works )</span>
+                                    <span>( Works )</span>
+                                </a></li>
+                                <li><a href="contact.html" class="splite-text-anim">
+                                    <span>( Start a Project )</span>
+                                    <span>( Start a Project )</span>
+                                </a></li>
+                            </ul>
+                        </nav>
+
+                        <a href="#" class="show-navigation-popover theme-btn">NAVIGATION MENU</a>
+
+                    </div>
+                </div>
+
+                <!-- Hero Bottom -->
+                <div class="hero-sec-bottom">
+                    <div class="hero-sec-bottom-left">
+                        <h1 class="hero-title with-circle-shape">
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down">awesome</span></span>
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down" data-animation-delay="0.3">Gallery</span></span>
+                            <span class="circle-primary-shape scroll-animation" data-animation="boldz_zoom_in" data-animation-delay="0.5"></span>
+                        </h1>
+                    </div>
+                    <div class="hero-sec-bottom-right">
+                        <div class="hero-sec-bottom-right-content-top">
+                            <p>[ 2019 - 2024 ]</p>
+                            <p>take a look at my latest project and see how
+                                i can help to bring your vision to life</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Hero Area End ===== -->
+        
+        <!-- ===== Service Area Start ===== -->
+        <div class="service-sec">
+            <div class="container">
+                <!-- Works -->
+                <div class="work-lists">
+                    {% for gallery in gallery %}
+                    <div class="work-box scroll-animation" data-animation="fade_from_bottom2">
+                        <div class="hover_mouse">
+                            <a href="work-single.html">
+                                View
+                            </a>
+                        </div>
+                        <a href="work-single.html" class="overlay"></a>
+                        <div class="work-img">
+                            <img src="{{ gallery.gallery_image.url }}" alt="Work">
+                        </div>
+                        <div class="work-bottom-content">
+                            <span class="work-price">
+                                {{ gallery.gallery_date}} <br>
+                               
+                            </span>
+                            <span class="work-cat">{{ gallery.gallery_title }}</span>
+                            <span class="work-number">[01]</span>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                   
+                </div>
+            </div>
+        </div>
+        <!-- ===== Service Area End ===== -->
+
+        <!-- ===== CTA Area Start ===== -->
+        <section class="cta-sec">
+            <div class="container">
+                <div class="custom-row">
+                    <div class="cta-content">
+                        <div class="section-header-2">
+                            <h2 class="section-title2">
+                                <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down">let’s make your <br>
+                                    design shine</span></span>
+                            </h2>
+                            <h6>“collaborate with me to craft exceptional designs <br>
+                                reflect your unique vision.”</h6>
+                        </div>
+                        <a href="contact.html" class="theme-btn">contact now</a>
+                        <ul class="social-links-text">
+                            <li><a href="https://instagram.com/" target="_blank" class="splite-text-anim">
+                                <span>Instagram <img src="assets/imgs/arrow.svg" alt="Icon"></span>
+                                <span>Instagram <img src="assets/imgs/arrow.svg" alt="Icon"></span>
+                            </a></li>
+                            <li><a href="https://twitter.com/" target="_blank" class="splite-text-anim">
+                                <span>Twitter <img src="assets/imgs/arrow.svg" alt="Icon"></span>
+                                <span>Twitter <img src="assets/imgs/arrow.svg" alt="Icon"></span>
+                            </a></li>
+                            <li><a href="https://facebook.com/" target="_blank" class="splite-text-anim">
+                                <span>Facebook <img src="assets/imgs/arrow.svg" alt="Icon"></span>
+                                <span>Facebook <img src="assets/imgs/arrow.svg" alt="Icon"></span>
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-img">
+                        <img src="assets/imgs/cta-img.png" alt="CTA">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== CTA Area End ===== -->
+        
+        {% include 'web/partials/footer.html' %}
+
+    </div>
+</div>
+
+{% endblock %}

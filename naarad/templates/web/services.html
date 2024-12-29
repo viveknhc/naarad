@@ -1,0 +1,123 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <!-- ===== Hero Area Start ===== -->
+        <section class="hero-sec work-hero-sec service-hero-sec">
+            <div class="container">
+                <div class="hero-sec-top scroll-animation" data-animation="slide_up">
+                    <div class="hero-left">
+                        <a href="{% url 'web:index' %}" class="logo"><img src="{% static 'web/imgs/naarad-logo.png' %}"
+                                alt="Symble"></a>
+                        <div class="location-and-time">
+                            Toronto, Canada / <span class="realtime"></span>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <nav class="main-menu">
+                            <ul>
+                                <li><a href="{% url 'web:services' %}" class="splite-text-anim">
+                                        <span>( Services )</span>
+                                        <span>( Services )</span>
+                                    </a></li>
+                                <li><a href="contact.html" class="splite-text-anim">
+                                        <span>( Start a Project )</span>
+                                        <span>( Start a Project )</span>
+                                    </a></li>
+                            </ul>
+                        </nav>
+
+                        <a href="#" class="show-navigation-popover theme-btn"> MENU</a>
+
+                    </div>
+                </div>
+
+                <!-- Hero Bottom -->
+                <div class="hero-sec-bottom">
+                    <div class="hero-sec-bottom-left">
+                        <h1 class="hero-title with-circle-shape">
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down">Major</span></span>
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down" data-animation-delay="0.3">Services</span></span>
+                            <span class="circle-primary-shape scroll-animation" data-animation="boldz_zoom_in"
+                                data-animation-delay="0.5"></span>
+                        </h1>
+                    </div>
+                    <div class="hero-sec-bottom-right">
+                        <div class="hero-sec-bottom-right-content-top">
+                            <p>[ 150+ satisfied customers ]</p>
+                            <p>take a look at my latest services and see how
+                                i can help to bring your needs to life</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Hero Area End ===== -->
+
+        <!-- ===== Service Area Start ===== -->
+        <section class="service-sec-2">
+            <div class="container">
+                <!-- Service Faqs -->
+                <div class="service-list-wrap">
+
+                    {% for services in services%}
+                    <div class="service-faq-item service-no-accordion-faq-item scroll-animation"
+                        data-animation="slide_down2">
+                        <h2 class="accordion-header">
+                            <img src="{% static 'web/imgs/service-faq-icon-1.svg' %}" alt="Icon"> {{services.service_title}}<span
+                                class="number">( 0{{forloop.counter}} )</span>
+                        </h2>
+                        <div class="accordion-body">
+                            <div class="accordion-content">
+                                <p>{{services.service_description|safe|truncatechars:150 }}</p>
+                                <p class="cast">Starts At <span class="border-bottom">Cost® — $2000</span></p>
+                                <div class="accordion-key-features">
+                                    <h5>[ KEY FEATURES ]</h5>
+                                    <ul>
+                                        <li>- Portfolio Highlights</li>
+                                        <li>- Client Testimonials</li>
+                                        <li>- Design Process</li>
+                                    </ul>
+                                </div>
+
+                                <div class="accordion-content-bottom">
+                                    <a href="{% url 'web:services-detail' services.id  %}" class="theme-btn">Get Started</a>
+
+                                    <div class="service-ratings">
+                                        <ul>
+                                            <li><i class="las la-star"></i></li>
+                                            <li><i class="las la-star"></i></li>
+                                            <li><i class="las la-star"></i></li>
+                                            <li><i class="las la-star"></i></li>
+                                            <li><i class="las la-star"></i></li>
+                                        </ul>
+                                        <span>900+ people rated</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-content-right">
+                                <div class="accordion-content-img">
+                                    <img src="{{ services.service_gif_image.url }}" alt="Accordion">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- ===== Service Area End ===== -->
+
+        {% include 'web/partials/footer.html' %}
+    </div>
+</div>
+
+
+
+{% endblock %}
