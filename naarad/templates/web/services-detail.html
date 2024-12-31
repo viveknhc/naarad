@@ -9,31 +9,7 @@
         <!-- ===== Hero Area Start ===== -->
         <section class="hero-sec hero-sec-2">
             <div class="container">
-                <div class="hero-sec-top scroll-animation" data-animation="slide_up">
-                    <div class="hero-left">
-                        <a href="index.html" class="logo"><img src="{% static 'web/imgs/r.svg' %}" alt="Symble"></a>
-                        <div class="location-and-time">
-                            Toronto, Canada / <span class="realtime"></span>
-                        </div>
-                    </div>
-                    <div class="hero-right">
-                        <nav class="main-menu">
-                            <ul>
-                                <li><a href="work.html" class="splite-text-anim">
-                                    <span>( Works )</span>
-                                    <span>( Works )</span>
-                                </a></li>
-                                <li><a href="work.html" class="splite-text-anim">
-                                    <span>( Start a Project )</span>
-                                    <span>( Start a Project )</span>
-                                </a></li>
-                            </ul>
-                        </nav>
-
-                        <a href="#" class="show-navigation-popover theme-btn">NAVIGATION MENU</a>
-
-                    </div>
-                </div>
+                {% include 'web/partials/navbar2.html' %}
 
                 <!-- Hero Bottom -->
                 <div class="hero-sec-bottom">
@@ -144,126 +120,11 @@
         </div>
         <!-- ===== Banner Area End ===== -->
         
-        <!-- ===== Task Area Start ===== -->
-        <section class="task-sec">
-            <div class="container">
-                <div class="task-lists">
-                    <div class="task-box">
-                        <h5><span class="circle-shape"></span> The development</h5>
-                        <div class="task-content">
-                            <p>Walnut's development process combines the parent company’s
-                                extensive knowledge of home furnishings with cutting-edge art
-                                production techniques to produce a refined and diverse collection
-                                of high-quality, accessible artwork.</p>
-                        </div>
-                    </div>
-                    <div class="task-box">
-                        <h5><span class="circle-shape"></span> The Takeaway</h5>
-                        <div class="task-content">
-                            <p>Walnut effectively leverages the parent company’s reputation to
-                                introduce a sophisticated range of affordable artwork, successfully 
-                                bridging the gap between home decor and art while appealing
-                                 to a tastefully discerning audience.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ===== Task Area End ===== -->
+
+
+
+        {% include 'web/partials/footer.html' %}>
         
-        <!-- ===== Next Project Area Start ===== -->
-        <section class="next-project-sec">
-            <div class="container">
-                <div class="custom-row">
-                    <div class="section-header">
-                        <div class="left">
-                            <h2 class="title">
-                                <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down">Next Project</span></span>
-                            </h2>
-                            <p>[ MARTIN LUKO ]</p>
-                        </div>
-                    </div>
-                    
-                    <div class="work-box">
-                        <div class="hover_mouse">
-                            <a href="work-single-3.html">
-                                View
-                            </a>
-                        </div>
-                        <a href="work-single-3.html" class="overlay"></a>
-                        <div class="work-img">
-                            <img src="{% static 'web/imgs/work-3.png' %}" alt="Work">
-                        </div>
-                        <div class="work-bottom-content">
-                            <span class="work-price">
-                                (cost® — $7000) <br>
-                                MARTIN LUKO
-                            </span>
-                            <span class="work-cat">(portfolio)</span>
-                            <span class="work-number">[03]</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ===== Next Project Area End ===== -->
-
-        <!-- ===== CTA Area Start ===== -->
-        <section class="cta-sec">
-            <div class="container">
-                <div class="custom-row">
-                    <div class="cta-content">
-                        <div class="section-header-2">
-                            <h2 class="section-title2">
-                                <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down">let’s make your <br>
-                                    design shine</span></span>
-                            </h2>
-                            <h6>“collaborate with me to craft exceptional designs <br>
-                                reflect your unique vision.”</h6>
-                        </div>
-                        <a href="contact.html" class="theme-btn">contact now</a>
-                        <ul class="social-links-text">
-                            <li><a href="https://instagram.com/" target="_blank" class="splite-text-anim">
-                                <span>Instagram <img src="{% static 'web/imgs/arrow.svg" alt="Icon"></span>
-                                <span>Instagram <img src="{% static 'web/imgs/arrow.svg" alt="Icon"></span>
-                            </a></li>
-                            <li><a href="https://twitter.com/" target="_blank" class="splite-text-anim">
-                                <span>Twitter <img src="{% static 'web/imgs/arrow.svg" alt="Icon"></span>
-                                <span>Twitter <img src="{% static 'web/imgs/arrow.svg" alt="Icon"></span>
-                            </a></li>
-                            <li><a href="https://facebook.com/" target="_blank" class="splite-text-anim">
-                                <span>Facebook <img src="{% static 'web/imgs/arrow.svg" alt="Icon"></span>
-                                <span>Facebook <img src="{% static 'web/imgs/arrow.svg" alt="Icon"></span>
-                            </a></li>
-                        </ul>
-                    </div>
-
-                    <div class="cta-img">
-                        <img src="{% static 'web/imgs/cta-img.png' %}" alt="CTA">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ===== CTA Area End ===== -->
-        
-        <!-- ===== Footer Area Start ===== -->
-        <footer class="footer-sec">
-            <div class="container">
-                <div class="big-text">
-                    <h2 class="section-title2 with-circle-shape">
-                        <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down">jaurden</span></span>
-                        <span class="circle-primary-shape scroll-animation" data-animation="boldz_zoom_in" data-animation-delay="0.5"></span>
-                    </h2>
-                </div>
-
-                <div class="copyright-wrap">
-                    <p>&copy;2024 design</p>
-                    <p><img src="{% static 'web/imgs/white-circle-shape.svg" alt="Shape"> c-09, toronto 632 7518760</p>
-                </div>
-            </div>
-        </footer>
-        <!-- ===== Footer Area End ===== -->
-
     </div>
 </div>
 

@@ -8,32 +8,8 @@
         <!-- ===== Hero Area Start ===== -->
         <section class="hero-sec work-hero-sec service-hero-sec">
             <div class="container">
-                <div class="hero-sec-top scroll-animation" data-animation="slide_up">
-                    <div class="hero-left">
-                        <a href="{% url 'web:index' %}" class="logo"><img src="{% static 'web/imgs/naarad-logo.png' %}"
-                                alt="Symble"></a>
-                        <div class="location-and-time">
-                            Toronto, Canada / <span class="realtime"></span>
-                        </div>
-                    </div>
-                    <div class="hero-right">
-                        <nav class="main-menu">
-                            <ul>
-                                <li><a href="{% url 'web:services' %}" class="splite-text-anim">
-                                        <span>( Services )</span>
-                                        <span>( Services )</span>
-                                    </a></li>
-                                <li><a href="contact.html" class="splite-text-anim">
-                                        <span>( Start a Project )</span>
-                                        <span>( Start a Project )</span>
-                                    </a></li>
-                            </ul>
-                        </nav>
 
-                        <a href="#" class="show-navigation-popover theme-btn">NAVIGATION MENU</a>
-
-                    </div>
-                </div>
+                {% include 'web/partials/navbar2.html' %}
 
                 <!-- Hero Bottom -->
                 <div class="hero-sec-bottom">

@@ -1,0 +1,110 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <!-- ===== Hero Area Start ===== -->
+        <section class="hero-sec work-hero-sec">
+            <div class="container">
+
+                {% include 'web/partials/navbar2.html' %}
+
+                <!-- Hero Bottom -->
+                <div class="hero-sec-bottom">
+                    <div class="hero-sec-bottom-left">
+                        <h1 class="hero-title with-circle-shape">
+                            <!-- <span class="overflow-hidden"><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down">awesome</span></span> -->
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down" data-animation-delay="0.3">Media</span></span>
+                            <span class="circle-primary-shape scroll-animation" data-animation="boldz_zoom_in"
+                                data-animation-delay="0.5"></span>
+                        </h1>
+                    </div>
+                    <div class="hero-sec-bottom-right">
+                        <div class="hero-sec-bottom-right-content-top">
+                            <p>[ 2019 - 2024 ]</p>
+                            <p>take a look at my latest project and see how
+                                i can help to bring your vision to life</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Hero Area End ===== -->
+
+        <!-- ===== Service Area Start ===== -->
+        <section class="service-sec media">
+            <div class="container">
+
+                <div class="tab-wrap">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        {% for category in categories %}
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link {% if forloop.first %}active{% endif %}"
+                                id="pills-{{ category|slugify }}-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-{{ category|slugify }}" type="button" role="tab"
+                                aria-controls="pills-{{ category|slugify }}"
+                                aria-selected="{{ forloop.first|yesno:'true,false' }}">
+                                {{ category }}
+                            </button>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+
+                <div class="tab-content" id="pills-tabContent">
+                    {% for category in categories %}
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %}"
+                        id="pills-{{ category|slugify }}" role="tabpanel"
+                        aria-labelledby="pills-{{ category|slugify }}-tab" tabindex="0">
+                        
+                        
+
+                        <!-- Works -->
+                        <div class="work-lists">
+                            {% for item in media_item %}
+                            {% if item.media_category == category %}
+                            <div class="work-box scroll-animation" data-animation="fade_from_bottom2"
+                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+                                <!-- <div class="hover_mouse" style="transform: translate3d(476.4px, 132.8px, 0px);">
+                                    <a href="work-single.html">
+                                        View
+                                    </a>
+                                </div>
+                                <a href="work-single.html" class="overlay"></a> -->
+                                <div class="work-img">
+                                    <img src="{{ item.media_image.url }}" alt="{{ item.media_title }}">
+                                </div>
+                                <div class="work-bottom-content">
+                                    
+                                    <span class="work-cat">{{ item.media_title }}</span>
+                               
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+
+
+            </div>
+        </section>
+        <!-- ===== Service Area End ===== -->
+
+
+
+        {% include 'web/partials/footer.html' %}
+
+    </div>
+</div>
+
+{% endblock %}

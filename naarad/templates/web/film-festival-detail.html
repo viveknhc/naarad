@@ -1,0 +1,145 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <!-- ===== Hero Area Start ===== -->
+        <section class="hero-sec hero-sec-2">
+            <div class="container">
+               
+                {% include 'web/partials/navbar2.html' %}
+
+                <!-- Hero Bottom -->
+                <div class="hero-sec-bottom">
+                    <div class="hero-sec-bottom-left">
+                        <h1 class="hero-title with-circle-shape">
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down">{{ films.film_title}}</span></span>
+                            
+                            <span class="circle-primary-shape scroll-animation" data-animation="boldz_zoom_in" data-animation-delay="0.5"></span>
+                        </h1>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+        <!-- ===== Hero Area End ===== -->
+
+        <!-- ===== Banner Area Start ===== -->
+        <div class="banner-sec">
+            <div class="container">
+                <div class="banner-img-inner">
+                    <div class="banner-img full-image-box">
+                        <img data-jarallax-element="-20 0" src="{{ films.film_image.url }}" alt="Banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===== Banner Area End ===== -->
+        
+
+        
+        <!-- ===== Task Area Start ===== -->
+        <section class="task-sec">
+            <div class="container">
+                <div class="task-lists">
+                    <div class="task-box">
+                        <h5><span class="circle-shape"></span> WHO WE ARE</h5>
+                        <div class="task-content">
+                            <p>{{ films.who_we_are|safe }}</p>
+                        </div>
+                    </div>
+
+                    <div class="task-box">
+                        <h5><span class="circle-shape"></span>WHERE WE ARE</h5>
+                        <div class="task-content">
+                            <p>{{ films.where_we_are|safe }}</p>
+                        </div>
+                    </div>
+
+                    <div class="task-box">
+                        <h5><span class="circle-shape"></span>WHAT YOU GET</h5>
+                        <div class="task-content">
+                            <p>{{ films.what_you_get|safe }}</p>
+                        </div>
+                    </div>
+
+                    <div class="task-box">
+                        <h5><span class="circle-shape"></span>CHOOSE YOUR COMPETITION</h5>
+                        <div class="task-content">
+                            <p>{{ films.choose_your_competition|safe }}</p>
+                        </div>
+                    </div>
+
+                    <div class="task-box">
+                        <h5><span class="circle-shape"></span>WHO WE WANT</h5>
+                        <div class="task-content">
+                            <p>{{ films.who_we_want|safe }}</p>
+                        </div>
+                    </div>
+
+                    <div class="task-box">
+                        <h5><span class="circle-shape"></span>Rules & Terms</h5>
+                        <div class="task-content">
+                            <p>{{ films.what_we_accept|safe }}</p>
+                        </div>
+                    </div>
+
+                    <div class="task-box">
+                        <h5><span class="circle-shape"></span>TERMS & REGULATIONS:</h5>
+                        <div class="task-content">
+                            <p>{{ films.terms_and_regulations|safe }}</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+        <!-- ===== Task Area End ===== -->
+
+  
+        <!-- ===== Next Project Area Start ===== -->
+        <section class="next-project-sec">
+            <div class="container">
+                <div class="custom-row">
+                    <div class="section-header">
+                        <div class="left">
+                            <h2 class="title">
+                                <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down">Next Project</span></span>
+                            </h2>
+                            <p>[ podcast studio ]</p>
+                        </div>
+                    </div>
+                    
+                    <div class="work-box">
+                        <div class="hover_mouse">
+                            <a href="work-single-8.html">
+                                View
+                            </a>
+                        </div>
+                        <a href="work-single-8.html" class="overlay"></a>
+                        <div class="work-img">
+                            <img src="{% static 'web/imgs/work-8.png' %}" alt="Work">
+                        </div>
+                        <div class="work-bottom-content">
+                            <span class="work-price">
+                                (cost® — $8500) <br>
+                                podcast studio
+                            </span>
+                            <span class="work-cat">(branding)</span>
+                            <span class="work-number">[08]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===== Next Project Area End ===== -->
+
+
+        {% include 'web/partials/footer.html' %}
+
+    </div>
+</div>
+
+{% endblock %}
