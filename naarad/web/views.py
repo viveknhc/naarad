@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from web.models import Service,Gallery,Film_Festival,Media,Clientele
+from web.models import Service,Gallery,Film_Festival,Media,Clientele,Contact
 from django.shortcuts import render,get_object_or_404
 
 
@@ -99,7 +99,7 @@ def testimonial(request):
     return render(request, "web/testimonial.html", context)
 
 def contact(request):
-    contact = Media.objects.all()
+    
     context = {
         "is_index": True,
         "contact": contact,
