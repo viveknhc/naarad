@@ -17,6 +17,8 @@ urlpatterns = [
     path("clientele/", views.clientele, name="clientele"),
     path("testimonial/", views.testimonial, name="testimonial"),
     path("contact/", views.contact, name="contact"),
+    path("csr/", views.csr, name="csr"),
+    path("csr-detail/<str:pk>", views.csrDetail, name="csr-detail"),
     
     
 ]

@@ -1,0 +1,60 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <!-- ===== Hero Area Start ===== -->
+        <section class="hero-sec hero-sec-2">
+            <div class="container">
+
+                {% include 'web/partials/navbar2.html' %}
+
+                <!-- Hero Bottom -->
+                <div class="hero-sec-bottom">
+                    <div class="hero-sec-bottom-left">
+                        <h1 class="hero-title with-circle-shape">
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down">Testimonials</span></span>
+
+                            <span class="circle-primary-shape scroll-animation" data-animation="boldz_zoom_in"
+                                data-animation-delay="0.5"></span>
+                        </h1>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ===== Hero Area End ===== -->
+
+        <section class="service-sec testimonial">
+            <div class="container">
+
+              
+            
+
+                <!-- Works -->
+                <div class="work-lists">
+
+                    <div class="work-box scroll-animation" data-animation="fade_from_bottom2"
+                        style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+                        <a href="https://www.youtube.com/embed/qjUly6XCrIw?si=gBxyn_8yTgmKr_u2" data-lightbox="video" data-title="Sample Video">
+                            <img src="{% static 'web/imgs/work-1.png' %}" alt="Sample Video" />
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        {% include 'web/partials/footer.html' %}
+
+    </div>
+</div>
+
+
+{% endblock %}

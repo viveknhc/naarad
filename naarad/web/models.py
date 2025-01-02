@@ -66,3 +66,27 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
     
+
+class CSR(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to='csr_images/', blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+class CSRAddOnContent(models.Model):
+    csr = models.ForeignKey(CSR, related_name='add_on_contents', on_delete=models.CASCADE)
+    sub_heading = models.CharField(max_length=200)
+    paragraph = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to='csr_addon_images/', blank=True, null=True)
+
+    def __str__(self):
+        return self.sub_heading
+    
+
+class Testimonials(models.Model):
+    url = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.url

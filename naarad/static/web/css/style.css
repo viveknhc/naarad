@@ -2532,3 +2532,25 @@ a.link-with-border:hover {
     padding: 50px 0 0 0;
 }
 
+
+
+.csr .section-header p {
+    text-transform: capitalize;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+}
+
+.csr button{
+    color: red;
+    border: none;
+    background-color: transparent;
+}
+
+.testimonial .work-box .work-img video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+    -webkit-transition: .5rs;
+}

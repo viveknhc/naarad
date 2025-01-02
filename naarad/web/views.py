@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from web.models import Service,Gallery,Film_Festival,Media,Clientele,Contact
+from web.models import Service,Gallery,Film_Festival,Media,Clientele,Contact,CSR,CSRAddOnContent,Testimonials
 from django.shortcuts import render,get_object_or_404
 
 
@@ -91,12 +91,12 @@ def media(request):
     return render(request, "web/media.html", context)
 
 def testimonial(request):
-    testimonial = Media.objects.all()
+    testimonial = Testimonials.objects.all()
     context = {
         "is_index": True,
         "testimonial": testimonial,
                }
-    return render(request, "web/testimonial.html", context)
+    return render(request, "web/testimonials.html", context)
 
 def contact(request):
     
@@ -105,3 +105,20 @@ def contact(request):
         "contact": contact,
                }
     return render(request, "web/contactus.html", context)
+
+def csr(request):
+    csr = CSR.objects.all()
+    context = {
+        "is_index": True,
+        "csr": csr,
+               }
+    return render(request, "web/csr.html", context)
+
+def csrDetail(request,pk):
+    csr_detail= get_object_or_404(CSR,pk=pk)
+    context = {
+        "is_index": True,
+        "csr_detail": csr_detail,
+               }
+    return render(request, "web/csr-detail.html", context)
+

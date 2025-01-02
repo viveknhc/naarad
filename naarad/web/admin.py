@@ -1,5 +1,5 @@
 from django.contrib import admin
-from web.models import Service,Gallery,Film_Festival,Media,Clientele,Contact
+from web.models import Service,Gallery,Film_Festival,Media,Clientele,Contact,CSRAddOnContent,CSR,Testimonials
 from django.utils.html import format_html
 
 
@@ -32,3 +32,15 @@ admin.site.register(Film_Festival)
 admin.site.register(Media)
 admin.site.register(Clientele)
 admin.site.register(Contact)
+admin.site.register(Testimonials)
+
+
+class CSRAddOnContentInline(admin.StackedInline):
+    model = CSRAddOnContent
+    extra = 1  # Number of empty fields to display initially
+    fields = ('sub_heading', 'paragraph', 'image')  # Specify the fields to display
+
+@admin.register(CSR)
+class CSRAdmin(admin.ModelAdmin):
+    inlines = [CSRAddOnContentInline]
+    list_display = ('title',)

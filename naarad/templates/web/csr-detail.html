@@ -1,0 +1,131 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <!-- ===== Hero Area Start ===== -->
+        <section class="hero-sec hero-sec-2">
+            <div class="container">
+
+                {% include 'web/partials/navbar2.html' %}
+
+                <!-- Hero Bottom -->
+                <div class="hero-sec-bottom">
+                    <div class="hero-sec-bottom-left">
+                        <h1 class="hero-title with-circle-shape">
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down">{{ csr_detail.title}}</span></span>
+
+                            <span class="circle-primary-shape scroll-animation" data-animation="boldz_zoom_in"
+                                data-animation-delay="0.5"></span>
+                        </h1>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ===== Hero Area End ===== -->
+
+        <!-- ===== Banner Area Start ===== -->
+        <div class="banner-sec">
+            <div class="container">
+                <div class="banner-img-inner">
+                    <div class="banner-img full-image-box">
+                        <img class="img-fluid h-auto" data-jarallax-element="-20 0" src="{{ csr_detail.image.url }}"
+                            alt="Banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===== Banner Area End ===== -->
+
+
+
+        <!-- ===== Next Project Area Start ===== -->
+        <section class="next-project-sec csr">
+            <div class="container">
+                {% for content in csr_detail.add_on_contents.all %}
+                <div class="custom-row">
+                    <div class="section-header">
+                        <div class="left">
+                            <h2 class="title">
+                                <span class="overflow-hidden"><span class="timeline-anim scroll-animation"
+                                        data-animation="slide_down">{{ content.sub_heading }}</span></span>
+                            </h2>
+                            <p>
+                                <span class="paragraph">{{ content.paragraph }}</span>
+                                <button class="read-more" data-expanded="false">show more</button>
+
+
+                            </p>
+
+                           
+
+
+                        </div>
+                    </div>
+
+                    <div class="work-box">
+
+                        {% if content.image %}
+                        <div class="work-img">
+                            <img class="img-fluid h-auto" src="{{ content.image.url }}" alt="Work">
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const maxLength = 500; // Max characters to display initially
+
+                // Select all paragraphs
+                document.querySelectorAll(".csr .section-header p").forEach((p) => {
+                    const paragraphSpan = p.querySelector(".csr .paragraph");
+                    const readMoreButton = p.querySelector(".csr .read-more");
+
+                    // Store the full text and trim it initially
+                    const fullText = paragraphSpan.textContent;
+                    if (fullText.length > maxLength) {
+                        const trimmedText = fullText.substring(0, maxLength) + "...";
+                        paragraphSpan.textContent = trimmedText;
+
+                        // Add event listener to the button
+                        readMoreButton.addEventListener("click", function () {
+                            const isExpanded = this.getAttribute("data-expanded") === "true";
+                            if (isExpanded) {
+                                // Show less
+                                paragraphSpan.textContent = trimmedText;
+                                this.textContent = "Show More";
+                            } else {
+                                // Show more
+                                paragraphSpan.textContent = fullText;
+                                this.textContent = "Show Less";
+                            }
+                            this.setAttribute("data-expanded", !isExpanded);
+                        });
+                    } else {
+                        // If the text is shorter than maxLength, hide the button
+                        readMoreButton.style.display = "none";
+                    }
+                });
+            });
+
+        </script>
+        <!-- ===== Next Project Area End ===== -->
+
+
+        {% include 'web/partials/footer.html' %}
+
+    </div>
+</div>
+
+
+
+{% endblock %}
