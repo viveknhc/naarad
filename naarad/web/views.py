@@ -4,7 +4,18 @@ from django.shortcuts import render,get_object_or_404
 
 
 def index(request):
-    context = {"is_index": True}
+    gallery = Gallery.objects.all()
+    client = Clientele.objects.all()
+    services = Service.objects.all()
+    media_item = Media.objects.all()
+    categories = Media.objects.values_list('media_category', flat=True).distinct() 
+    context = {"is_index": True,
+               "gallery":gallery,
+               "client":client,
+               "services":services,
+               "media_item": media_item,
+               "categories": categories
+               }
     return render(request, "web/index.html", context)
 
 def about(request):
