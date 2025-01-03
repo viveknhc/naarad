@@ -1,9 +1,9 @@
-
 from pathlib import Path
+from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-nl1i80vvb)0kfofekkb$j72^)p8v1rgs&@kg)5tb_6)+*61mih'
+SECRET_KEY = config("SECRET_KEY")
 
 DEBUG = True
 
@@ -52,10 +52,25 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'naarad.wsgi.application'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+# Define DATABASES (postgres-production)
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": config("DB_ENGINE", default="django.db.backends.sqlite3"),
+        "NAME": config("DB_NAME", default=BASE_DIR / "db.sqlite3"),
+        "USER": config("DB_USER", default=""),
+        "PASSWORD": config("DB_PASSWORD", default=""),
+        "HOST": config("DB_HOST", default="localhost"),
+        "PORT": "5432",
+        'OPTIONS': {},
     }
 }
 
