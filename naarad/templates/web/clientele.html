@@ -46,45 +46,33 @@
                         {% endfor %}
                     </ul>
                 </div>
-
-
+                
                 <div class="tab-content" id="pills-tabContent">
                     {% for clientele_catagory in clientele_catagory %}
                     <div class="tab-pane fade {% if forloop.first %}show active{% endif %}"
                         id="pills-{{ clientele_catagory|slugify }}" role="tabpanel"
                         aria-labelledby="pills-{{ clientele_catagory|slugify }}-tab" tabindex="0">
-
-
-
+                
                         <!-- Works -->
                         <div class="work-lists">
                             {% for item in clientele_all %}
                             {% if item.clientele_catagory == clientele_catagory %}
-                            <div class="work-box scroll-animation" data-animation="fade_from_bottom2"
-                                style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                                <!-- <div class="hover_mouse" style="transform: translate3d(476.4px, 132.8px, 0px);">
-                                        <a href="work-single.html">
-                                            View
-                                        </a>
-                                    </div>
-                                    <a href="work-single.html" class="overlay"></a> -->
+                            <div class="work-box scroll-animation" data-animation="fade_from_bottom2">
                                 <div class="work-img">
                                     <img src="{{ item.clientele_image.url }}" alt="{{ item.clientele_title }}">
                                 </div>
                                 <div class="work-bottom-content">
-
                                     <span class="work-cat">{{ item.clientele_title }}</span>
-
                                 </div>
                             </div>
                             {% endif %}
                             {% endfor %}
                         </div>
-
+                
                     </div>
                     {% endfor %}
                 </div>
-
+                
 
 
 

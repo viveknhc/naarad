@@ -1,5 +1,5 @@
 from django.contrib import admin
-from web.models import Service,Gallery,Film_Festival,Media,Clientele,Contact,CSRAddOnContent,CSR,Testimonials
+from web.models import Service,Gallery,Film_Festival,Media_Image,Clientele,Contact,CSRAddOnContent,CSR,Testimonials
 from django.utils.html import format_html
 
 
@@ -29,7 +29,7 @@ admin.site.register(Gallery, GalleryAdmin)
 
 # admin.site.register(Gallery)
 admin.site.register(Film_Festival)
-admin.site.register(Media)
+admin.site.register(Media_Image)
 admin.site.register(Clientele)
 admin.site.register(Contact)
 admin.site.register(Testimonials)

@@ -32,42 +32,40 @@
             <div class="container">
                 <div class="contact-form">
 
-                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="0ea6f02e-35e1-4bc8-801a-f700e7c5a95c">
-                        <input type="hidden" name="from_name" value="Boldz">
-                        <input type="hidden" name="subject" value="Notification From Boldz">
-
+                    <form action="#" method="post">
+                        {% csrf_token %}
                         <div class="form-col-2">
                             <div class="input-group">
-                                <label for="first_name" class="title-with-circle">
+                                <label for="name" class="title-with-circle">
                                     <span class="circle-shape"></span> ENTER NAME
                                 </label>
-                                <input type="text" id="first_name" name="first_name">
+                                <input type="text" id="name" name="name">
                             </div>
                             <div class="input-group">
-                                <label for="last_name" class="title-with-circle">
+                                <label for="email" class="title-with-circle">
                                     <span class="circle-shape"></span> ENTER EMAIL 
                                 </label>
-                                <input type="text" id="last_name" name="last_name" >
+                                <input type="email" id="email" name="email" >
                             </div>
                         </div>
                         <div class="input-group">
-                            <label for="email" class="title-with-circle">
+                            <label for="subject" class="title-with-circle">
                                 <span class="circle-shape"></span> ENTER SUBJECT
                             </label>
-                            <input type="email" id="email" name="email">
+                            <input type="text" id="subject" name="subject">
                         </div>
                         <div class="input-group">
-                            <label for="budget" class="title-with-circle">
+                            <label for="message" class="title-with-circle">
                                 <span class="circle-shape"></span>ENTER MESSEGE
                             </label>
                             <textarea name="message" id="message"></textarea>
                         </div>
                         <div class="input-group">
-                            <button class="theme-btn" type="submit">SUBMIT NOW</button>
+                            <button type="submit">SUBMIT NOW</button>
                         </div>
-                        <p class="text-base text-center" id="result"></p>
+                  
                     </form>
+                    
                 </div>
             </div>
         </div>

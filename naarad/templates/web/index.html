@@ -79,12 +79,11 @@
                                     style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">about
                                     NAARAD</span></span>
                         </h2>
-                        <p>from toronto - based startup to global <span class="border-bottom">visual design
-                                studio</span></p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicin</span></p>
                     </div>
                     <div class="section-header-right">
-                        <div class="section-subtitle"><span class="white-circle"></span> <span
-                                class="theme-btn primary-bg">let’s work together</span></div>
+                        <a href="{% url 'web:about' %}" class="section-subtitle"><span class="white-circle"></span>
+                            <span class="theme-btn primary-bg">View More</span></a>
                     </div>
                 </div>
 
@@ -94,12 +93,13 @@
                     </div>
 
                     <div class="about-content">
-                        <span class="about-title">[ ABOUT ME ]</span>
-                        <p>At Jaurden, we transform the way growing brands and <br>
-                            Fortune 50’s show up across modern Media. Our <br>
-                            team has a healthy obsession with motion. We live it, <br>
-                            breathe it, and completely embrace its ability to <br>
-                            capture the heart of your brand.</p>
+                        <span class="about-title">[ ABOUT US ]</span>
+                        <p>Naarad, the celestial PR was once responsible to connect the three worlds – the Gods, the
+                            humans and the demons alike… He traversed three worlds, and connected each to the other with
+                            his communication skills. And of course, ensured that the three worlds connected and in the
+                            end… all is well… With Naarad as our mentor, we seek to make a difference in the lives of
+                            our clients with our Differential and Positive Communication, Brand and Image Building
+                            Strategies</p>
 
                         <div class="about-awards-wrap">
                             <h6>Honourable mention on <span>Awwwards©</span></h6>
@@ -143,27 +143,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-bottom">
-                    <a href="https://drive.google.com/file/d/1Issw97gs-kreC7QWev66jO6YC2FdF0L0/view" target="_blank"
-                        class="theme-btn" download="">Download Resume</a>
-                    <span class="est-date">[ est. 2012 ]</span>
-                </div>
+
             </div>
         </section>
         <!-- ===== About Area End ===== -->
-      
+
+        <!-- ===== Hero Banner Area Start ===== -->
+        <div class="hero-banner-sec">
+            <div class="container">
+                <div class="hero-banner-img-inner">
+                    <div class="hero-banner-img full-image-box">
+                        <img data-jarallax-element="-20 0" src="{% static 'web/imgs/hero-banner.jpg' %}" alt="Banner">
+                    </div>
+                </div>
+                <div class="hero-banner-content">
+                    <p>Xotto® a leading strategic brand consultancy that
+                        positions and redefines the world'.</p>
+
+                    <span class="link-with-border">All rights reserved &copy;</span>
+                </div>
+            </div>
+        </div>
+        <!-- ===== Hero Banner Area End ===== -->
+
+
         <section class="service-sec media">
             <div class="container">
                 <div class="section-header">
                     <div class="left">
                         <h2 class="title">
-                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation" data-animation="slide_down" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">NAARAD
+                            <span class="overflow-hidden"><span class="timeline-anim scroll-animation"
+                                    data-animation="slide_down"
+                                    style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">NAARAD
                                     MEDIA</span></span>
                         </h2>
-                  
+
                     </div>
                     <div class="section-header-right">
-                        <div class="section-subtitle"><span class="white-circle"></span> <span class="theme-btn primary-bg">View More</span></div>
+                        <div class="section-subtitle"><span class="white-circle"></span> <span
+                                class="theme-btn primary-bg">View More</span></div>
                     </div>
                 </div>
                 <div class="tab-wrap">
@@ -181,15 +199,15 @@
                         {% endfor %}
                     </ul>
                 </div>
-                
+
 
                 <div class="tab-content" id="pills-tabContent">
                     {% for category in categories %}
                     <div class="tab-pane fade {% if forloop.first %}show active{% endif %}"
                         id="pills-{{ category|slugify }}" role="tabpanel"
                         aria-labelledby="pills-{{ category|slugify }}-tab" tabindex="0">
-                        
-                        
+
+
 
                         <!-- Works -->
                         <div class="work-lists">
@@ -207,15 +225,15 @@
                                     <img src="{{ item.media_image.url }}" alt="{{ item.media_title }}">
                                 </div>
                                 <div class="work-bottom-content">
-                                    
+
                                     <span class="work-cat">{{ item.media_title }}</span>
-                               
+
                                 </div>
                             </div>
                             {% endif %}
                             {% endfor %}
                         </div>
-                        
+
                     </div>
                     {% endfor %}
                 </div>
@@ -265,15 +283,7 @@
                             <div class="accordion-body">
                                 <div class="accordion-content">
                                     <p>{{services.service_description|safe}}</p>
-                                    <p class="cast">Starts At <span class="border-bottom">Cost® — $2000</span></p>
-                                    <div class="accordion-key-features">
-                                        <h5>[ KEY FEATURES ]</h5>
-                                        <ul>
-                                            <li>- Portfolio Highlights</li>
-                                            <li>- Client Testimonials</li>
-                                            <li>- Design Process</li>
-                                        </ul>
-                                    </div>
+
 
                                     <a href="{% url 'web:services-detail' services.id  %}" class="theme-btn">Read
                                         more</a>
@@ -378,13 +388,6 @@
         <!-- ===== Gallery Area End ===== -->
 
 
-
-
-
-
-
-
-
         <!-- ===== Faq Area Start ===== -->
         <section class="service-sec testimonial">
             <div class="container">
@@ -406,15 +409,16 @@
 
                 <!-- Works -->
                 <div class="work-lists">
-
+                    {% for testimonial in testimonial%}
                     <div class="work-box scroll-animation" data-animation="fade_from_bottom2"
                         style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                        <a href="https://www.youtube.com/embed/qjUly6XCrIw?si=gBxyn_8yTgmKr_u2" data-lightbox="video"
-                            data-title="Sample Video">
-                            <img src="{% static 'web/imgs/work-1.png' %}" alt="Sample Video" />
-                        </a>
+                        <iframe width="560" height="315"
+                            src="{{ testimonial.url }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                             allowfullscreen></iframe>
                     </div>
-
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -434,21 +438,8 @@
                             <h6>“collaborate with me to craft exceptional designs <br>
                                 reflect your unique vision.”</h6>
                         </div>
-                        <a href="contact.html" class="theme-btn">contact now</a>
-                        <ul class="social-links-text">
-                            <li><a href="https://instagram.com/" target="_blank" class="splite-text-anim">
-                                    <span>Instagram <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
-                                    <span>Instagram <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
-                                </a></li>
-                            <li><a href="https://twitter.com/" target="_blank" class="splite-text-anim">
-                                    <span>Twitter <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
-                                    <span>Twitter <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
-                                </a></li>
-                            <li><a href="https://facebook.com/" target="_blank" class="splite-text-anim">
-                                    <span>Facebook <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
-                                    <span>Facebook <img src="{% static 'web/imgs/arrow.svg' %}" alt="Icon"></span>
-                                </a></li>
-                        </ul>
+                        <a href="{% url 'web:contact' %}" class="theme-btn">contact now</a>
+                       
                     </div>
 
                     <div class="cta-img">

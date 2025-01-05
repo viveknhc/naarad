@@ -36,14 +36,16 @@
 
                 <!-- Works -->
                 <div class="work-lists">
-
+                    {% for testimonial in testimonial%}
                     <div class="work-box scroll-animation" data-animation="fade_from_bottom2"
                         style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-                        <a href="https://www.youtube.com/embed/qjUly6XCrIw?si=gBxyn_8yTgmKr_u2" data-lightbox="video" data-title="Sample Video">
-                            <img src="{% static 'web/imgs/work-1.png' %}" alt="Sample Video" />
-                        </a>
+                        <iframe width="560" height="315"
+                            src="{{ testimonial.url }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                             allowfullscreen></iframe>
                     </div>
-
+                    {% endfor %}
                 </div>
             </div>
         </section>

@@ -38,7 +38,7 @@ class Film_Festival(models.Model):
         return self.film_title
     
 
-class Media(models.Model):
+class Media_Image(models.Model):
     media_category = models.CharField(max_length=125,choices=MEDIA_CHOICE)
     media_title = models.CharField(max_length=100)
     media_image = VersatileImageField(upload_to = "media")
@@ -61,7 +61,7 @@ class Contact(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     subject = models.CharField(max_length=200)
-    message = HTMLField()
+    message = models.TextField()
 
     def __str__(self):
         return self.name
@@ -86,7 +86,7 @@ class CSRAddOnContent(models.Model):
     
 
 class Testimonials(models.Model):
-    url = models.CharField(max_length=200)
+    url = models.URLField()
 
     def __str__(self):
         return self.url

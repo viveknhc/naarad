@@ -1272,6 +1272,10 @@ a.link-with-border:hover {
 }
 .client-logo-slide img {
     display: block;
+    display: block;
+    height: 158px;
+    object-fit: cover;
+    width: auto;
 }
 
 /* # Process */
