@@ -1275,7 +1275,7 @@ a.link-with-border:hover {
     display: block;
     height: 158px;
     object-fit: cover;
-    width: auto;
+    width: 200px;
 }
 
 /* # Process */
