@@ -1,3 +1,14 @@
+
+@font-face {
+    font-family: 'din';
+    src: url('../fonts/din/DIN-Regular.ttf')
+  }
+
+  @font-face {
+    font-family: 'din-bold';
+    src: url('../fonts/din/DIN-Bold.ttf')
+  }
+
 :root {
     --dark: #000000;
     --darkBg: #000000;
@@ -5,47 +16,11 @@
     --whiteBg: #ffffff;
     --primary: #ec0000;
     --paragraph: rgba(29, 29, 31, 0.7);
-    --font_inter_tight: "Inter Tight", sans-serif;
-    --font_inter: "Inter", system-ui;
+    --font_inter_tight: "din";
+    --font_inter: "din";
 }
 
-/* ======================================
-*       TABLE OF CONTENT
-*----------------------------------------
-*   # Global
-*   # Pre Loader
-*   # Magic Cursor
-*   # Hero
-*   # Menu
-*   # Popup Menu
-*   # Hero Banner
-*   # Service
-*   # Work Details
-*   # Task List
-*   # Next Project
-*   # About
-*   # Client Logos
-*   # Process
-*   # Banner
-*   # Motivation
-*   # Experience
-*   # Favourite Stack
-*   # Testimonial
-*   # Pricing
-*   # Blog Details
-*   # Faq
-*   # CTA
-*   # Contact
-*   # 404
-*   # Footer
-*
-*
-*
-*
-*   # KeyFrame   
-========================================*/
 
-/* ===== # Global ===== */
 
 *,
 *::before,
