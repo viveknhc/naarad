@@ -1451,9 +1451,9 @@ a.link-with-border:hover {
 .client-logo-slide img {
     display: block;
     display: block;
-    height: 158px;
+    height: 500px;
     object-fit: cover;
-    width: 200px;
+    width: 500px;
 }
 
 /* # Process */
@@ -2928,6 +2928,12 @@ a.link-with-border:hover {
     -webkit-transition: .5rs;
 }
 
+.cta-sec{
+    padding: 100px 0 0 0;
+}
+
+
+
 @media screen and (max-width: 767px) {
     .about-sec {
         padding: 50px 0 0 0;
@@ -3004,6 +3010,7 @@ a.link-with-border:hover {
         font-weight: 400;
         font-family: 'glory-regular';
         line-height: 20px;
+        justify-content: center;
     }
 
     .hero-sec .hero-sec-top {

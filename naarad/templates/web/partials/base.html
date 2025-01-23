@@ -29,6 +29,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <!-- ===== Stylesheet ===== -->
     <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
 </head>
@@ -86,6 +88,23 @@
     <script src="{% static 'web/js/main.js' %}"></script>
 
     <script src="{% static 'web/js/themescroll.js' %}"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- home image slider -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,           // Only one slide visible
+            spaceBetween: 10,            // No gap between slides
+            loop: true,
+            autoplay: {
+                delay: 3000,              // Auto-play interval (in ms)
+                disableOnInteraction: false,  // Allow autoplay even after manual interaction
+            },
+        });
+
+
+    
+
+    </script>
 </body>
 
 </html>
