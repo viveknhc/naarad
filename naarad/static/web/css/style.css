@@ -2558,6 +2558,12 @@ a.link-with-border:hover {
     border-radius: 4px;
 }
 
+.cta-sec .cta-img img{
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
 /* # CTA 2 */
 .cta-sec-2 .custom-row {
     justify-content: space-between;
